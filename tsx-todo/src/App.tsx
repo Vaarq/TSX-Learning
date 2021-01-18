@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TodoListItem} from "./TodoListItem";
 
-const todos: Todo[] = [
+const initialTodos: Todo[] = [
   {
     text: "Finish my code",
     complete: false
   },
+  {
+    text: "blah",
+    complete: true
+  },
 ];
 
 function App() {
+  const [todos, setTodos] = useState(initialTodos);
   return (
     <ul>
     <TodoListItem todo={todos[0]} />
